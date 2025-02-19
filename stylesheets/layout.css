@@ -1,0 +1,10 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  width: 100vw;
+  background-color: aqua;
+}
+p {
+  font-family: "Tkachenko Sketch 4F";
+}
