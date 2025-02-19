@@ -3,8 +3,28 @@
 }
 body {
   width: 100vw;
-  background-color: aqua;
 }
 p {
   font-family: "Tkachenko Sketch 4F";
+}
+/* ------- СВОРОВАННЫЙ КОД ДЛЯ ДВИГАТЕЛЬНЫХ ЭЛЕМЕНТОВ */
+#mydiv {
+  position: absolute;
+  z-index: 9;
+  background-color: #f1f1f1;
+  border: 1px solid #d3d3d3;
+  text-align: center;
+}
+
+#mydivheader {
+  padding: 10px;
+  cursor: move;
+  z-index: 10;
+  background-color: #2196f3;
+  color: #fff;
+}
+
+/* СВОРОВАННЫЙ КОД ДЛЯ ВВОДА ТЕКСТА */
+[contenteditable] {
+  outline: 0px solid transparent;
 }
