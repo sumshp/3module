@@ -1,0 +1,19 @@
+@keyframes pokadr {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: -50.5vw 0;
+  }
+}
+@keyframes tudasuda {
+  0% {
+    transform: translateY(1vw);
+  }
+  50% {
+    transform: translateY(3vw);
+  }
+  100% {
+    transform: translateY(1vw);
+  }
+}

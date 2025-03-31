@@ -3,28 +3,812 @@
 }
 body {
   width: 100vw;
+  background-color: black;
 }
-p {
-  font-family: "Tkachenko Sketch 4F";
+/* ПЕРВАЯ СЕКЦИЯ: ЗАКРЫВАШКИ И ЗАГОЛОВОК */
+.first {
+  width: 100vw;
+  height: 70vw;
 }
-/* ------- СВОРОВАННЫЙ КОД ДЛЯ ДВИГАТЕЛЬНЫХ ЭЛЕМЕНТОВ */
-#mydiv {
-  position: absolute;
-  z-index: 9;
-  background-color: #f1f1f1;
-  border: 1px solid #d3d3d3;
+.first_screen {
+  width: 100vw;
+  height: 15vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.zagolovok_1 {
+  font-family: Stadium;
+  font-size: 15vw;
+  letter-spacing: 0.7%;
+  line-height: 80%;
+  color: white;
+  margin-top: 3vw;
+  padding-left: 1vw;
+}
+.podzagolovok_1 {
+  font-family: Bebas Neue Cyrillic;
+  font-size: 6vw;
+  letter-spacing: -3%;
+  line-height: 80%;
+  text-align: right;
+  color: #d64700;
+  margin-top: 3vw;
+  margin-right: 1vw;
+}
+
+.anouncment {
+  font-family: Bebas Neue Cyrillic;
+  font-size: 4.5vw;
+  letter-spacing: -3%;
+  line-height: 97%;
   text-align: center;
+  color: #ffffff;
+  position: absolute;
+  left: 50%;
+  top: 40vw;
+  transform: translate(-50%, -50%);
+  z-index: -1;
 }
 
-#mydivheader {
-  padding: 10px;
-  cursor: move;
+.anouncment-accent1 {
+  color: #d64700;
+}
+.anouncment-accent2 {
+  color: #799dff;
+}
+
+/* плашка с рыбой */
+.ryba {
+  background-color: #101010;
+  width: 26vw;
+  height: 36vw;
+  border: 0.15vw solid #799dff;
+  border-radius: 0.7vw;
+  position: absolute;
+  margin-top: 16vw;
+  margin-left: 26vw;
   z-index: 10;
-  background-color: #2196f3;
-  color: #fff;
+}
+.ryba_pikcha {
+  position: absolute;
+  width: 24vw;
+  height: 36vw;
+  margin-left: 0.5vw;
+  z-index: 1;
+  pointer-events: none;
+}
+.ryba_text {
+  font-family: Stadium;
+  font-size: 8vw;
+  letter-spacing: 1%;
+  color: #799dff;
+  padding-top: 28.5vw;
+  padding-left: 0.8vw;
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+}
+.ryba_krestik {
+  position: absolute;
+  width: 5vw;
+  height: 2vw;
+  margin-top: 1vw;
+  margin-left: 19vw;
+  z-index: 1000;
+  pointer-events: auto;
 }
 
-/* СВОРОВАННЫЙ КОД ДЛЯ ВВОДА ТЕКСТА */
-[contenteditable] {
-  outline: 0px solid transparent;
+/* плашка с креветкой */
+.krevetka {
+  background-color: #101010;
+  width: 37vw;
+  height: 23vw;
+  border: 0.15vw solid #799dff;
+  border-radius: 0.7vw;
+  position: absolute;
+  margin-top: 6vw;
+  margin-left: 12vw;
+  z-index: 20;
+}
+.krevetka_pikcha {
+  position: absolute;
+  width: 33vw;
+  height: 20vw;
+  z-index: 1;
+  pointer-events: none;
+}
+.krevetka_text {
+  font-family: Stadium;
+  font-size: 8vw;
+  letter-spacing: 1%;
+  color: #799dff;
+  padding-top: 15.5vw;
+  padding-left: 19vw;
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+}
+.krevetka_krestik {
+  position: absolute;
+  width: 5vw;
+  height: 2vw;
+  margin-top: 1vw;
+  margin-left: 30vw;
+  z-index: 1000;
+  pointer-events: auto;
+}
+
+/* плашка с лобстером */
+.lobster {
+  background-color: #101010;
+  width: 30vw;
+  height: 43vw;
+  border: 0.15vw solid #799dff;
+  border-radius: 0.7vw;
+  position: absolute;
+  margin-top: 2vw;
+  margin-left: 47vw;
+  z-index: 30;
+}
+.lobster_pikcha {
+  position: absolute;
+  width: 29vw;
+  height: 36vw;
+  margin-top: 3vw;
+  margin-left: 0.5vw;
+  z-index: 1;
+  pointer-events: none;
+}
+.lobster_text {
+  font-family: Stadium;
+  font-size: 8vw;
+  letter-spacing: 1%;
+  color: #799dff;
+  padding-top: 35.5vw;
+  padding-left: 0.8vw;
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+}
+.lobster_krestik {
+  position: absolute;
+  width: 5vw;
+  height: 2vw;
+  margin-top: 1vw;
+  margin-left: 23vw;
+  z-index: 1000;
+  pointer-events: auto;
+}
+
+.ryba,
+.krevetka,
+.lobster {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.ryba.hide,
+.krevetka.hide,
+.lobster.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.rakushka_1 {
+  margin-top: 6vw;
+  margin-left: 85vw;
+  width: 19vw;
+  height: 15vw;
+  animation: tudasuda 5s infinite linear;
+}
+.zvezda_1 {
+  margin-top: 11vw;
+  margin-left: -4vw;
+  width: 18vw;
+  height: 23vw;
+  animation: tudasuda 5s infinite linear;
+}
+
+/* ВТОРАЯ СЕКЦИЯ: БИЛЕТЫ */
+.second {
+  width: 100vw;
+  height: 50vw;
+  margin-top: 5vw;
+}
+.podzagolovok_2 {
+  font-family: Bebas Neue Cyrillic;
+  font-size: 4vw;
+  letter-spacing: -2%;
+  line-height: 80%;
+  text-align: left;
+  color: #d64700;
+  margin-left: 4vw;
+}
+.tarify {
+  display: flex;
+  justify-content: center;
+  gap: 4vw;
+  padding: 5vw 12vw;
+}
+.tarif_1 {
+  display: flex;
+  justify-content: center;
+  background-color: black;
+  width: 22vw;
+  height: 11vw;
+  border: 0.15vw solid #ffffff;
+  border-radius: 0.7vw;
+  transform: rotate(-10deg);
+  position: relative;
+  cursor: pointer;
+}
+.tarif_text_1 {
+  font-family: Stadium;
+  font-size: 10vw;
+  letter-spacing: 1%;
+  color: white;
+  margin-top: 1vw;
+}
+.tarif_2 {
+  display: flex;
+  justify-content: center;
+  background-color: black;
+  width: 26vw;
+  height: 11vw;
+  border: 0.15vw solid #799dff;
+  border-radius: 0.7vw;
+  transform: rotate(10deg);
+}
+.tarif_text_2 {
+  font-family: Stadium;
+  font-size: 10vw;
+  letter-spacing: 1%;
+  color: #799dff;
+  margin-top: 1vw;
+}
+.tarif_3 {
+  display: flex;
+  justify-content: center;
+  background-color: black;
+  width: 29vw;
+  height: 11vw;
+  border: 0.15vw solid #d64700;
+  border-radius: 0.7vw;
+  transform: rotate(-10deg);
+}
+.tarif_text_3 {
+  font-family: Stadium;
+  font-size: 10vw;
+  letter-spacing: 1%;
+  color: #d64700;
+  margin-top: 1vw;
+}
+
+/* стили для первого тарифа */
+.tarif_1 {
+  display: flex;
+  justify-content: center;
+  background-color: black;
+  width: 22vw;
+  height: 11vw;
+  border: 0.15vw solid #ffffff;
+  border-radius: 0.7vw;
+  transform: rotate(-10deg);
+  position: relative;
+  cursor: pointer;
+}
+
+.tarif_text_1 {
+  font-family: Stadium;
+  font-size: 10vw;
+  letter-spacing: 1%;
+  color: white;
+  margin-top: 1vw;
+}
+
+.tarif_1.active {
+  background-color: white;
+}
+
+.tarif_1.active .tarif_text_1 {
+  color: black;
+}
+
+.tarif_description {
+  font-family: Bebas Neue Cyrillic;
+  font-size: 3vw;
+  color: white;
+  text-align: center;
+  display: none;
+  margin: 0 auto;
+  padding-top: 2vw;
+}
+
+.tarif_description.visible {
+  display: block;
+}
+
+/* стили для второго тарифа */
+.tarif_2 {
+  display: flex;
+  justify-content: center;
+  background-color: black;
+  width: 26vw;
+  height: 11vw;
+  border: 0.15vw solid #799dff;
+  border-radius: 0.7vw;
+  transform: rotate(10deg);
+  position: relative;
+  cursor: pointer;
+}
+
+.tarif_2.active {
+  background-color: #799dff;
+}
+
+.tarif_2.active .tarif_text_2 {
+  color: white;
+}
+
+.tarif2_description {
+  font-family: Bebas Neue Cyrillic;
+  font-size: 3vw;
+  color: white;
+  text-align: center;
+  display: none;
+  margin: 0 auto;
+  padding-top: 2vw;
+}
+
+.tarif2_description.visible {
+  display: block;
+}
+
+/* стили для третьего тарифа */
+.tarif_3 {
+  display: flex;
+  justify-content: center;
+  background-color: black;
+  width: 29vw;
+  height: 11vw;
+  border: 0.15vw solid #d64700;
+  border-radius: 0.7vw;
+  transform: rotate(-10deg);
+  position: relative;
+  cursor: pointer;
+}
+
+.tarif_3.active {
+  background-color: #d64700;
+}
+
+.tarif_3.active .tarif_text_3 {
+  color: #101010;
+}
+
+.tarif3_description {
+  font-family: Bebas Neue Cyrillic;
+  font-size: 3vw;
+  color: white;
+  text-align: center;
+  display: none;
+  margin: 0 auto;
+  padding-top: 2vw;
+}
+
+.tarif3_description.visible {
+  display: block;
+}
+
+.second_section {
+  display: flex;
+  flex-direction: column;
+}
+
+.guitar {
+  position: absolute;
+  width: 38vw;
+  height: 60vw;
+  left: -1vw;
+  top: 68vw;
+  z-index: -1;
+}
+.saxofon {
+  position: absolute;
+  width: 34vw;
+  height: 51vw;
+  right: 15vw;
+  top: 65vw;
+  z-index: -1;
+}
+
+.rakushka_2 {
+  width: 19vw;
+  height: 15vw;
+  transform: rotate(88deg);
+  position: absolute;
+  left: 82vw;
+  animation: tudasuda 5s infinite linear;
+}
+
+/* ТРЕТЬЯ СЕКЦИЯ: НАКЛЕЙКИ */
+.third {
+  width: 100vw;
+  height: 60vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.third_screen {
+  width: 100vw;
+  height: 15vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.zagolovok_3 {
+  font-family: Stadium;
+  font-size: 15vw;
+  letter-spacing: 0.7%;
+  line-height: 80%;
+  color: white;
+  margin-top: 3vw;
+  padding-left: 1vw;
+}
+
+.podzagolovok_3 {
+  font-family: Bebas Neue Cyrillic;
+  font-size: 6vw;
+  letter-spacing: -3%;
+  line-height: 80%;
+  text-align: right;
+  color: #d64700;
+  margin-top: 3vw;
+  margin-right: 1vw;
+}
+
+.fugu {
+  width: 34vw;
+  height: 39vw;
+}
+
+/* двигающиеся стикеры (наверное можно было как то сократить весь этот код, но мне в целом так нравится) */
+.sticker_logo {
+  position: absolute;
+  width: 16vw;
+  height: 16vw;
+  left: 10vw;
+  top: 14vw;
+  transform: rotate(-15deg);
+  cursor: grab;
+  user-select: none;
+}
+
+.sticker_logo.dragging {
+  cursor: grabbing;
+  opacity: 0.9;
+}
+
+.sticker_ryba {
+  position: absolute;
+  width: 10vw;
+  height: 10vw;
+  left: 22vw;
+  top: 26vw;
+  transform: rotate(20deg);
+  cursor: grab;
+  user-select: none;
+}
+
+.sticker_ryba.dragging {
+  cursor: grabbing;
+  opacity: 0.9;
+}
+
+.sticker_molniya {
+  position: absolute;
+  width: 14vw;
+  height: 14vw;
+  left: 5vw;
+  top: 33vw;
+  transform: rotate(-10deg);
+  cursor: grab;
+  user-select: none;
+}
+
+.sticker_molniya.dragging {
+  cursor: grabbing;
+  opacity: 0.9;
+}
+.sticker_vinyl {
+  position: absolute;
+  width: 12vw;
+  height: 12vw;
+  left: 23vw;
+  top: 41vw;
+  transform: rotate(15deg);
+  cursor: grab;
+  user-select: none;
+}
+
+.sticker_vinyl.dragging {
+  cursor: grabbing;
+  opacity: 0.9;
+}
+.sticker_piano {
+  position: absolute;
+  width: 17vw;
+  height: 17vw;
+  right: 17vw;
+  top: 38vw;
+  transform: rotate(-5deg);
+  cursor: grab;
+  user-select: none;
+}
+
+.sticker_piano.dragging {
+  cursor: grabbing;
+  opacity: 0.9;
+}
+
+.sticker_rakushka {
+  position: absolute;
+  width: 12vw;
+  height: 12vw;
+  right: 8vw;
+  top: 26vw;
+  transform: rotate(10deg);
+  cursor: grab;
+  user-select: none;
+}
+
+.sticker_rakushka.dragging {
+  cursor: grabbing;
+  opacity: 0.9;
+}
+.sticker_nota {
+  position: absolute;
+  width: 12vw;
+  height: 12vw;
+  right: 20vw;
+  top: 18vw;
+  transform: rotate(-10deg);
+  cursor: grab;
+  user-select: none;
+}
+.sticker_nota.dragging {
+  cursor: grabbing;
+  opacity: 0.9;
+}
+
+.zvezda_3 {
+  width: 18vw;
+  height: 23vw;
+  position: absolute;
+  right: 1vw;
+  top: 48vw;
+  z-index: -1;
+  animation: tudasuda 5s infinite linear;
+}
+/* ЧЕТВЁРТАЯ СЕКЦИЯ: МИЛЛИАРД ФЛЕКСБОКСОВ */
+.fourth {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 2vw;
+  width: 100vw;
+  height: 60vw;
+}
+.akula_i_text {
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+}
+.akula_text {
+  font-family: Bebas Neue Cyrillic;
+  font-size: 4vw;
+  line-height: 80%;
+  text-align: right;
+  color: #d64700;
+}
+.akula {
+  width: 50.5vw;
+  height: 49vw;
+  background-image: url("../images/akula_pokadr.svg");
+  background-repeat: no-repeat;
+  background-size: 101vw 49vw;
+  overflow: hidden;
+  animation: pokadr 1.5s steps(1) infinite;
+}
+
+.plashki {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  gap: 1vw;
+}
+.plashka_1 {
+  display: flex;
+  justify-content: left;
+  flex-direction: column;
+  background-color: #101010;
+  width: 42vw;
+  height: 31vw;
+  border: 0.15vw solid #799dff;
+  border-radius: 0.7vw;
+}
+
+/* написашка */
+.plashka_1_text {
+  font-family: Stadium;
+  font-size: 10vw;
+  letter-spacing: 1%;
+  color: white;
+  padding-top: 1.5vw;
+  padding-left: 1.5vw;
+}
+.plashka_accent {
+  font-family: Bebas Neue Cyrillic;
+  font-size: 3vw;
+  color: #acacac;
+  margin-left: 2vw;
+  min-width: 20vw;
+  outline: none;
+  cursor: text;
+  white-space: pre-wrap;
+}
+
+.plashka_accent:focus {
+  color: #ffffff;
+}
+
+/* рисовашка */
+.plashka_2 {
+  position: relative;
+  display: flex;
+  justify-content: left;
+  background-color: #101010;
+  width: 42vw;
+  height: 21vw;
+  border: 0.15vw solid #799dff;
+  border-radius: 0.7vw;
+  overflow: hidden;
+}
+
+#drawing-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: crosshair;
+  z-index: 1;
+}
+
+.plashka_2_text {
+  position: relative;
+  font-family: Stadium;
+  font-size: 10vw;
+  letter-spacing: 1%;
+  color: white;
+  padding-top: 1.5vw;
+  padding-left: 1.5vw;
+  margin: 0;
+  pointer-events: none; 
+  user-select: none; 
+}
+.plashka_warning {
+  font-family: Bebas Neue Cyrillic;
+  font-size: 2.5vw;
+  color: #d64700;
+}
+
+.rakushka_4 {
+  width: 19vw;
+  height: 15vw;
+  transform: rotate(10deg);
+  position: absolute;
+  left: 2vw;
+  animation: tudasuda 5s infinite linear;
+}
+
+/* ПОДВАЛ : ну подвал че ещё сказать */
+.podval {
+  width: 100vw;
+  height: 47vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.zvezda_4 {
+  width: 18vw;
+  height: 23vw;
+  top: 240vw;
+  left: 5vw;
+  position: absolute;
+  z-index: -1;
+  animation: tudasuda 5s infinite linear;
+}
+
+/* флексбокс люди  */
+.people {
+  width: 92vw;
+  display: flex;
+  justify-content: space-between;
+}
+.people1 {
+  width: 37vw;
+  height: 27.5vw;
+}
+.people2 {
+  width: 32vw;
+  height: 27.5vw;
+}
+
+/* реплики в абсолюте */
+.replika_1 {
+  position: absolute;
+  transform: translate(0%, -200%);
+  font-family: Bebas Neue Cyrillic;
+  font-size: 3.5vw;
+  color: #ffffff;
+  user-select: none;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+.replika_2 {
+  position: absolute;
+  transform: translate(40%, 0%);
+  font-family: Bebas Neue Cyrillic;
+  font-size: 3.5vw;
+  color: #ffffff;
+  user-select: none;
+  cursor: pointer;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+.replika-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* флексбокс подпись */
+.podvalchik {
+  background-color: #101010;
+  width: 92vw;
+  height: 9vw;
+  border: 0.15vw solid #799dff;
+  border-radius: 0.7vw;
+  margin-top: -1.5vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2vw;
+}
+.logo {
+  width: 18vw;
+  height: 7vw;
+}
+.fio {
+  font-family: Bebas Neue Cyrillic;
+  font-size: 4.5vw;
+  color: #ffffff;
+  letter-spacing: -3%;
+  line-height: 80%;
+}
+
+/* доп приколы с ховером */
+.zagolovok_1:hover,
+.zagolovok_3:hover {
+  color: #d64700;
+}
+
+.akula:hover {
+  animation-play-state: paused;
 }

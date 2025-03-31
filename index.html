@@ -9,17 +9,188 @@
     <script src="javascripts/functions.js"></script>
   </head>
   <body>
-    <p>ФЕСТИВАЛЬ ДЖАЗА В БЛЮЗЕ мяу</p>
-    <!-- СВОРОВАННЫЙ КОД ДЛЯ ДВИГАТЕЛЬНЫХ ЭЛЕМЕНТОВ -->
-    Draggable DIV
-    <div id="mydiv">
-      <!-- Include a header DIV with the same name as the draggable DIV, followed by "header" -->
-      <div id="mydivheader">Click here to move</div>
-      <p>Move</p>
-      <p>this</p>
-      <p>DIV</p>
-    </div>
-    <!-- СВОРОВАННЫЙ КОД ДЛЯ ВВОДА ТЕКСТА -->
-    <p contenteditable="true">This is an editable paragraph.</p>
+    <!-- ПЕРВАЯ СЕКЦИЯ: ЗАКРЫВАШКИ И ЗАГОЛОВОК -->
+    <section class="first">
+      <div class="first_screen">
+        <p class="podzagolovok_1">
+          ФЕСТИВАЛЬ<br />
+          ДЖАЗА В БЛЮЗЕ
+        </p>
+        <p class="zagolovok_1">ПОДВОДЬЕ</p>
+      </div>
+
+      <p class="anouncment">
+        <span class="anouncment-accent1"> ТОЛЬКО ЭТОЙ ВЕСНОЙ </span
+        ><br />фестиваль современных <br />джазовых исполнителей <br />в блюзе.
+        <br />
+        <span class="anouncment-accent2">4 мая</span> 18:00
+      </p>
+
+      <div class="ryba">
+        <img class="ryba_pikcha" src="images/rybka.svg" alt="рыба" />
+        <p class="ryba_text">ЖАННА СОЛИСТКА</p>
+        <img class="ryba_krestik" src="images/krestik.svg" alt="крестик" />
+      </div>
+
+      <div class="krevetka">
+        <img class="krevetka_pikcha" src="images/krevetka.svg" alt="креветка" />
+        <p class="krevetka_text">ВАСЯ ПИАНИСТ</p>
+        <img class="krevetka_krestik" src="images/krestik.svg" alt="крестик" />
+      </div>
+
+      <div class="lobster">
+        <img class="lobster_pikcha" src="images/lobster.svg" alt="лобстер" />
+        <p class="lobster_text">ДЖЕЙМС САКСОФОНИСТ</p>
+        <img class="lobster_krestik" src="images/krestik.svg" alt="крестик" />
+      </div>
+
+      <img class="rakushka_1" src="images/rakushka_fon.svg" alt="ракушка" />
+      <img class="zvezda_1" src="images/zvezda_fon.svg" alt="звезда" />
+    </section>
+    <!-- ВТОРАЯ СЕКЦИЯ: БИЛЕТЫ -->
+    <section class="second">
+      <div class="second_section">
+        <p class="podzagolovok_2">
+          ВЫБЕРИ БИЛЕТ <br />
+          С ПОДХОДЯЩИМ <br />
+          ТАРИФОМ
+        </p>
+        <div class="tarify">
+          <div class="tarif_1">
+            <p class="tarif_text_1">БАЗОВЫЙ</p>
+          </div>
+          <div class="tarif_2"><p class="tarif_text_2">НАПЛЫВ</p></div>
+          <div class="tarif_3"><p class="tarif_text_3">ЖЕМЧУЖИНА</p></div>
+        </div>
+        <div class="tarif_description">
+          -общий зал<br />
+          -фри бар до 21:00
+        </div>
+        <div class="tarif2_description">
+          -зона vip 1<br />
+          -безлимитный бар
+        </div>
+        <div class="tarif3_description">
+          -зона vip 2<br />
+          -безлимитный бар <br />
+          -афтерпати
+        </div>
+      </div>
+      <img src="images/guitar.svg" alt="гитара" class="guitar" />
+      <img src="images/saxofon.svg" alt="саксофон" class="saxofon" />
+
+      <img class="rakushka_2" src="images/rakushka_fon.svg" alt="ракушка" />
+    </section>
+
+    <!-- ТРЕТЬЯ СЕКЦИЯ: НАКЛЕЙКИ -->
+    <section class="third">
+      <div class="third_screen">
+        <p class="podzagolovok_3">
+          КУПИ НАШ МЕРЧ<br />
+          И ОБКЛЕЙСЯ
+        </p>
+        <p class="zagolovok_3">НАКЛЕЙКАМИ</p>
+      </div>
+      <img src="images/fugu.svg" alt="рыба фугу" class="fugu" />
+
+      <!-- стикеры -->
+      <img
+        src="images/sticker_logo.svg"
+        alt="стикер с логотипом"
+        class="sticker_logo draggable-sticker"
+      />
+      <img
+        src="images/sticker_ryba.svg"
+        alt="стикер рыбка"
+        class="sticker_ryba draggable-sticker"
+      />
+      <img
+        src="images/sticker_molniya.svg"
+        alt="стикер молния"
+        class="sticker_molniya draggable-sticker"
+      />
+      <img
+        src="images/sticker_vinyl.svg"
+        alt="стикер виниловая пластинка"
+        class="sticker_vinyl draggable-sticker"
+      />
+      <img
+        src="images/sticker_piano.svg"
+        alt="стикер пианино"
+        class="sticker_piano draggable-sticker"
+      />
+      <img
+        src="images/sticker_rakushka.svg"
+        alt="стикер ракушка"
+        class="sticker_rakushka draggable-sticker"
+      />
+      <img
+        src="images/sticker_nota.svg"
+        alt="стикер нота"
+        class="sticker_nota draggable-sticker"
+      />
+
+      <img src="images/zvezda_fon.svg" alt="звезда" class="zvezda_3" />
+    </section>
+    <!-- ЧЕТВЁРТАЯ СЕКЦИЯ: МИЛЛИАРД ФЛЕКСБОКСОВ -->
+    <section class="fourth">
+      <!-- то что слева -->
+      <div class="akula_i_text">
+        <p class="akula_text">
+          оставь данные<br />для покупки<br />
+          билета
+        </p>
+        <div class="akula"></div>
+      </div>
+      <!-- то что справа -->
+      <div class="plashki">
+        <div class="plashka_1">
+          <p class="plashka_1_text">ФИО И ПОЧТА</p>
+          <div class="plashka_accent" contenteditable="true">тут печатать</div>
+        </div>
+
+        <div class="plashka_2">
+          <canvas id="drawing-canvas"></canvas>
+          <p class="plashka_2_text">ПОДПИСЬ</p>
+        </div>
+
+        <p class="plashka_warning">
+          * блюз не несет ответсвенности за то, <br />
+          что вы не умеете дышать под водой
+        </p>
+      </div>
+
+      <img src="images/rakushka_fon.svg" alt="ракушка" class="rakushka_4" />
+    </section>
+
+    <!-- ПОДВАЛ : ну подвал че ещё сказать -->
+    <section class="podval">
+      <img src="images/zvezda_fon.svg" alt="звездочка" class="zvezda_4" />
+      <div class="people">
+        <img src="images/people_1.svg" alt="мужчина" class="people1" />
+        <img src="images/people_2.svg" alt="женщина" class="people2" />
+      </div>
+      <p class="replika_1">
+        блрбрбрлблв <br />
+        брвблрбблрв
+      </p>
+      <p class="replika_2">
+        бульблблаббвр <br />
+        буларлблбл
+      </p>
+
+      <div class="podvalchik">
+        <img
+          class="logo"
+          src="images/hse_logo_white.png"
+          alt="логотип ниу вшэ"
+        />
+        <p class="fio">
+          ШАРАФУТДИНОВА <br />
+          СЮМБЕЛЬ
+        </p>
+      </div>
+    </section>
+    <script src="javascripts/functions.js"></script>
   </body>
 </html>
