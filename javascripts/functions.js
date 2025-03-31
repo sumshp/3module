@@ -281,5 +281,3 @@ document.addEventListener("DOMContentLoaded", () => {
     canvas.dispatchEvent(mouseEvent);
   }
 });
-
-ъ;
