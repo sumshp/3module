@@ -110,10 +110,8 @@ document.addEventListener("DOMContentLoaded", () => {
       pos4 = 0;
     let isDragging = false;
 
-    // Для десктопа
     element.addEventListener("mousedown", dragMouseDown);
 
-    // Для мобильных устройств
     element.addEventListener("touchstart", dragTouchDown, { passive: false });
     element.addEventListener("touchmove", dragTouchMove, { passive: false });
     element.addEventListener("touchend", closeDragElement);
@@ -137,7 +135,6 @@ document.addEventListener("DOMContentLoaded", () => {
       document.addEventListener("mousemove", elementDrag);
       element.classList.add("dragging");
 
-      // Важно для позиционирования на мобилках
       if (!element.style.position || element.style.position === "static") {
         element.style.position = "absolute";
       }
@@ -162,7 +159,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function dragTouchMove(e) {
-      if (e.touches.length > 1) return; // Игнорируем мультитач
+      if (e.touches.length > 1) return;
       elementDrag(e);
     }
 
