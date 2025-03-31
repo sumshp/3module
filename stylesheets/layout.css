@@ -231,59 +231,6 @@ body {
   gap: 4vw;
   padding: 5vw 12vw;
 }
-.tarif_1 {
-  display: flex;
-  justify-content: center;
-  background-color: black;
-  width: 22vw;
-  height: 11vw;
-  border: 0.15vw solid #ffffff;
-  border-radius: 0.7vw;
-  transform: rotate(-10deg);
-  position: relative;
-  cursor: pointer;
-}
-.tarif_text_1 {
-  font-family: Stadium;
-  font-size: 10vw;
-  letter-spacing: 1%;
-  color: white;
-  margin-top: 1vw;
-}
-.tarif_2 {
-  display: flex;
-  justify-content: center;
-  background-color: black;
-  width: 26vw;
-  height: 11vw;
-  border: 0.15vw solid #799dff;
-  border-radius: 0.7vw;
-  transform: rotate(10deg);
-}
-.tarif_text_2 {
-  font-family: Stadium;
-  font-size: 10vw;
-  letter-spacing: 1%;
-  color: #799dff;
-  margin-top: 1vw;
-}
-.tarif_3 {
-  display: flex;
-  justify-content: center;
-  background-color: black;
-  width: 29vw;
-  height: 11vw;
-  border: 0.15vw solid #d64700;
-  border-radius: 0.7vw;
-  transform: rotate(-10deg);
-}
-.tarif_text_3 {
-  font-family: Stadium;
-  font-size: 10vw;
-  letter-spacing: 1%;
-  color: #d64700;
-  margin-top: 1vw;
-}
 
 /* стили для первого тарифа */
 .tarif_1 {
@@ -343,6 +290,14 @@ body {
   cursor: pointer;
 }
 
+.tarif_text_2 {
+  font-family: Stadium;
+  font-size: 10vw;
+  letter-spacing: 1%;
+  color: #799dff;
+  margin-top: 1vw;
+}
+
 .tarif_2.active {
   background-color: #799dff;
 }
@@ -379,6 +334,14 @@ body {
   cursor: pointer;
 }
 
+.tarif_text_3 {
+  font-family: Stadium;
+  font-size: 10vw;
+  letter-spacing: 1%;
+  color: #d64700;
+  margin-top: 1vw;
+}
+
 .tarif_3.active {
   background-color: #d64700;
 }
@@ -400,6 +363,8 @@ body {
 .tarif3_description.visible {
   display: block;
 }
+
+
 
 .second_section {
   display: flex;
@@ -476,7 +441,7 @@ body {
   height: 39vw;
 }
 
-/* двигающиеся стикеры (наверное можно было как то сократить весь этот код, но мне в целом так нравится) */
+/* двигающиеся стикеры (наверное можно было как то сократить весь этот код, но вроде нормально) */
 .sticker_logo {
   position: absolute;
   width: 16vw;
@@ -698,8 +663,8 @@ body {
   padding-top: 1.5vw;
   padding-left: 1.5vw;
   margin: 0;
-  pointer-events: none; 
-  user-select: none; 
+  pointer-events: none;
+  user-select: none;
 }
 .plashka_warning {
   font-family: Bebas Neue Cyrillic;

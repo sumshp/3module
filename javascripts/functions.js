@@ -108,31 +108,68 @@ document.addEventListener("DOMContentLoaded", () => {
       pos2 = 0,
       pos3 = 0,
       pos4 = 0;
+    let isDragging = false;
 
-    element.onmousedown = dragMouseDown;
+    // Для десктопа
+    element.addEventListener("mousedown", dragMouseDown);
+
+    // Для мобильных устройств
+    element.addEventListener("touchstart", dragTouchDown, { passive: false });
+    element.addEventListener("touchmove", dragTouchMove, { passive: false });
+    element.addEventListener("touchend", closeDragElement);
 
     function dragMouseDown(e) {
       e.preventDefault();
-      pos3 = e.clientX;
-      pos4 = e.clientY;
-      document.onmouseup = closeDragElement;
-      document.onmousemove = elementDrag;
+      startDrag(e.clientX, e.clientY);
+    }
+
+    function dragTouchDown(e) {
+      e.preventDefault();
+      const touch = e.touches[0];
+      startDrag(touch.clientX, touch.clientY);
+    }
+
+    function startDrag(clientX, clientY) {
+      pos3 = clientX;
+      pos4 = clientY;
+      isDragging = true;
+      document.addEventListener("mouseup", closeDragElement);
+      document.addEventListener("mousemove", elementDrag);
       element.classList.add("dragging");
+
+      // Важно для позиционирования на мобилках
+      if (!element.style.position || element.style.position === "static") {
+        element.style.position = "absolute";
+      }
     }
 
     function elementDrag(e) {
+      if (!isDragging) return;
       e.preventDefault();
-      pos1 = pos3 - e.clientX;
-      pos2 = pos4 - e.clientY;
-      pos3 = e.clientX;
-      pos4 = e.clientY;
+
+      const clientX = e.clientX || (e.touches && e.touches[0].clientX);
+      const clientY = e.clientY || (e.touches && e.touches[0].clientY);
+
+      if (!clientX || !clientY) return;
+
+      pos1 = pos3 - clientX;
+      pos2 = pos4 - clientY;
+      pos3 = clientX;
+      pos4 = clientY;
+
       element.style.top = element.offsetTop - pos2 + "px";
       element.style.left = element.offsetLeft - pos1 + "px";
     }
 
+    function dragTouchMove(e) {
+      if (e.touches.length > 1) return; // Игнорируем мультитач
+      elementDrag(e);
+    }
+
     function closeDragElement() {
-      document.onmouseup = null;
-      document.onmousemove = null;
+      isDragging = false;
+      document.removeEventListener("mouseup", closeDragElement);
+      document.removeEventListener("mousemove", elementDrag);
       element.classList.remove("dragging");
     }
   }
@@ -207,6 +244,10 @@ document.addEventListener("DOMContentLoaded", () => {
   canvas.addEventListener("mouseup", stopDrawing);
   canvas.addEventListener("mouseout", stopDrawing);
 
+  canvas.addEventListener("touchstart", handleTouch);
+  canvas.addEventListener("touchmove", handleTouch);
+  canvas.addEventListener("touchend", stopDrawing);
+
   function startDrawing(e) {
     isDrawing = true;
     draw(e);
@@ -243,3 +284,5 @@ document.addEventListener("DOMContentLoaded", () => {
     canvas.dispatchEvent(mouseEvent);
   }
 });
+
+ъ;

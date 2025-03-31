@@ -1,0 +1,267 @@
+@media screen and (max-width: 768px) {
+  /* ПЕРВАЯ СЕКЦИЯ */
+  .zagolovok_1,
+  .zagolovok_3 {
+    font-size: 20vw;
+  }
+  .podzagolovok_1,
+  .podzagolovok_3 {
+    font-size: 7.5vw;
+  }
+  .anouncment {
+    font-size: 5vw;
+  }
+
+  .ryba {
+    width: 36vw;
+    height: 46vw;
+    margin-top: 6vw;
+    margin-left: 50vw;
+  }
+  .ryba_pikcha {
+    width: 34vw;
+    height: 46vw;
+    margin-left: 0.5vw;
+  }
+  .ryba_text {
+    font-size: 11vw;
+    padding-top: 36vw;
+    padding-left: 6vw;
+  }
+  .ryba_krestik {
+    width: 8vw;
+    height: 5vw;
+    margin-top: 1vw;
+    margin-left: 25vw;
+  }
+
+  /* плашка с креветкой */
+  .krevetka {
+    width: 47vw;
+    height: 33vw;
+    margin-top: 10vw;
+    margin-left: 12vw;
+  }
+  .krevetka_pikcha {
+    width: 46vw;
+    height: 33vw;
+  }
+  .krevetka_text {
+    font-size: 11vw;
+    padding-top: 23vw;
+    padding-left: 1vw;
+  }
+  .krevetka_krestik {
+    width: 8vw;
+    height: 5vw;
+    margin-top: 1vw;
+    margin-left: 37vw;
+  }
+
+  /* плашка с лобстером */
+  .lobster {
+    width: 40vw;
+    height: 53vw;
+    margin-top: 20vw;
+    margin-left: 30vw;
+  }
+  .lobster_pikcha {
+    width: 39vw;
+    height: 46vw;
+    margin-top: 3vw;
+    margin-left: 0.5vw;
+  }
+  .lobster_text {
+    font-size: 11vw;
+    padding-top: 43vw;
+    padding-left: 0.8vw;
+  }
+  .lobster_krestik {
+    width: 8vw;
+    height: 5vw;
+    margin-top: 1vw;
+    margin-left: 30vw;
+  }
+
+  /* ВТОРАЯ СЕКЦИЯ*/
+  .second {
+    margin-top: 24vw;
+  }
+  .podzagolovok_2 {
+    font-size: 6vw;
+  }
+
+  /* стили для тарифов */
+  .tarify {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 11vw;
+    padding: 5vw 12vw;
+  }
+
+  .tarif_1,
+  .tarif_2,
+  .tarif_3 {
+    width: 50vw;
+    height: 20vw;
+  }
+
+  .tarif_text_1,
+  .tarif_text_2,
+  .tarif_text_3 {
+    font-size: 20vw;
+    margin-top: 1vw;
+  }
+
+  .tarif_description,
+  .tarif2_description,
+  .tarif3_description {
+    font-size: 6.5vw;
+    padding-top: 2vw;
+    padding-left: 10vw;
+  }
+
+  .guitar {
+    width: 58vw;
+    height: 80vw;
+    left: -6vw;
+    top: 133vw;
+    z-index: -1;
+  }
+  .saxofon {
+    width: 54vw;
+    height: 71vw;
+    right: 20vw;
+    top: 95vw;
+    z-index: -1;
+  }
+
+  /* ТРЕТЬЯ СЕКЦИЯ господи помоги*/
+  .third {
+    margin-top: 85vw;
+  }
+  .fugu {
+    width: 72vw;
+    height: 77vw;
+  }
+
+  /* стикеры ляляля */
+  .sticker_logo {
+    width: 26vw;
+    height: 26vw;
+    left: 1vw;
+    top: 14vw;
+  }
+
+  .sticker_ryba {
+    display: none;
+  }
+
+  .sticker_molniya {
+    width: 24vw;
+    height: 24vw;
+    left: 7vw;
+    top: 85vw;
+  }
+
+  .sticker_vinyl {
+    width: 22vw;
+    height: 22vw;
+    left: -3vw;
+    top: 49vw;
+  }
+
+  .sticker_piano {
+    width: 30vw;
+    height: 30vw;
+    right: 17vw;
+    top: 82vw;
+  }
+
+  .sticker_rakushka {
+    width: 22vw;
+    height: 22vw;
+    right: -2vw;
+    top: 48vw;
+  }
+
+  .sticker_nota {
+    width: 22vw;
+    height: 22vw;
+    right: 5vw;
+    top: 18vw;
+  }
+
+  /* ЧЕТВЕРТАЯ СЕКЦИЯ  */
+  .fourth {
+    margin-top: 60vw;
+    flex-direction: column;
+  }
+  .akula_i_text {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+  .akula_text {
+    font-size: 6vw;
+  }
+  .akula {
+    width: 50.5vw;
+    height: 49vw;
+    background-image: url("../images/akula_pokadr.svg");
+    background-repeat: no-repeat;
+    background-size: 101vw 49vw;
+    overflow: hidden;
+    animation: pokadr 1.5s steps(1) infinite;
+  }
+  .plashka_1 {
+    display: none;
+  }
+
+  /* рисовашка */
+  .plashki {
+    justify-content: center;
+    align-items: center;
+  }
+  .plashka_2 {
+    width: 90vw;
+    height: 50vw;
+  }
+
+  #drawing-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: crosshair;
+    z-index: 1;
+  }
+
+  .plashka_2_text {
+    font-size: 18vw;
+    padding-top: 1.5vw;
+    padding-left: 1.5vw;
+  }
+  .plashka_warning {
+    font-size: 4vw;
+  }
+   #drawing-canvas {
+    touch-action: none; 
+  }
+
+  /* ПОДВАЛ */
+  .podval {
+    margin-top: 50vw;
+  }
+
+  .zvezda_3 {
+    top: 150vw;
+  }
+  .rakushka_4 {
+    z-index: -1;
+  }
+  .zvezda_4 {
+    display: none;
+  }
+}
