@@ -170,6 +170,7 @@ body {
   position: absolute;
   z-index: 1;
   pointer-events: none;
+  white-space: nowrap;
 }
 .lobster_krestik {
   position: absolute;
@@ -363,8 +364,6 @@ body {
 .tarif3_description.visible {
   display: block;
 }
-
-
 
 .second_section {
   display: flex;
